@@ -1,0 +1,7 @@
+C:\Users\Natalia\source\repos\SmartGun\SmartGun\obj\Debug\SmartGun.csprojResolveAssemblyReference.cache
+C:\Users\Natalia\source\repos\SmartGun\SmartGun\obj\Debug\SmartGun.csproj.CoreCompileInputs.cache
+C:\Users\Natalia\source\repos\SmartGun\SmartGun\bin\Debug\SmartGun.exe.config
+C:\Users\Natalia\source\repos\SmartGun\SmartGun\bin\Debug\SmartGun.exe
+C:\Users\Natalia\source\repos\SmartGun\SmartGun\bin\Debug\SmartGun.pdb
+C:\Users\Natalia\source\repos\SmartGun\SmartGun\obj\Debug\SmartGun.exe
+C:\Users\Natalia\source\repos\SmartGun\SmartGun\obj\Debug\SmartGun.pdb
