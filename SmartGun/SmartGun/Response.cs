@@ -105,9 +105,9 @@ namespace SmartGun
         public void Post(NetworkStream stream)
         {
             StreamWriter writer = new StreamWriter(stream);
-            writer.Flush();
             writer.WriteLine(String.Format("{0} {1}\r\nServer: {2}\r\nContent-Type: {3}\r\nAccept-Ranges: bytes\r\nContent-Length: {4}\r\n",
                 HTTPServer.VERSION, Status, HTTPServer.NAME, Mime, Data.Length));
+            writer.Flush();
             stream.Write(Data, 0, Data.Length);
         }
     }

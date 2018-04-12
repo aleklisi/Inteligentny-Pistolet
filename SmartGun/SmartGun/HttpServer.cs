@@ -14,8 +14,8 @@ namespace SmartGun
 {
     public class HTTPServer
     {
-        public const String MSG_DIR = @"/root/msg/";
-        public const String WEB_DIR = @"/root/web/";
+        public const String MSG_DIR = @"\root\msg\";
+        public const String WEB_DIR = @"\root\web";
         public const String VERSION = "HTTP/1.1";
         public const String NAME = "HTTP Server v 1.0";
 
