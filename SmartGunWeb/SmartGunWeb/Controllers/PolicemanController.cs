@@ -31,12 +31,9 @@ namespace SmartGunWeb.Controllers
             return policeman;
         }
 
-        public IEnumerable<Policeman> GetProductsByCategory(string status)
-        {
-            return allPoliceman.Where(
-                (p) => string.Equals(p.Status, status,
-                    StringComparison.OrdinalIgnoreCase));
-        }
+        public IEnumerable<Policeman> GetPolicemanWithStatus(string status) => allPoliceman.Where(
+            (p) => string.Equals(p.Status.ToString(), status,
+                StringComparison.OrdinalIgnoreCase));
 
         // POST api/policeman/{id}/{password}
         public HttpResponseMessage Post(int id, [FromBody]string password)
@@ -46,8 +43,6 @@ namespace SmartGunWeb.Controllers
                 Request.CreateResponse(HttpStatusCode.Forbidden, "Error during registration"); 
             response.Content = new StringContent("The user with " + id + "can't be created", Encoding.Unicode);
 
-       //     if (Int32.TryParse(id, out userId))
-        //    {
                 var policeman = allPoliceman.FirstOrDefault((p) => p.Id == id);
 
                 if (policeman != null)
@@ -66,14 +61,7 @@ namespace SmartGunWeb.Controllers
                 response = Request.CreateResponse(HttpStatusCode.OK, "The user with " + id + "is created");
                 response.Content = new StringContent("Welcome", Encoding.Unicode);
                 allPoliceman.Add(newPoliceman);
-        /*    }
-            else
-            {
-                response =
-                    Request.CreateResponse(HttpStatusCode.BadRequest, "The user with " + id + "can't be created");
-                response.Content = new StringContent("The id's format is not correct", Encoding.Unicode);
-            }
-            */
+
             return response;
         }
 
@@ -115,6 +103,33 @@ namespace SmartGunWeb.Controllers
             response.Content = new StringContent("Sign in succesfully", Encoding.Unicode);
             loggedPoliceman.Add(newPoliceman);
 
+            return response;
+        }
+
+        //DELETE api/policeman/id
+        public HttpResponseMessage SignOut(int id)
+        {
+            HttpResponseMessage response =
+                Request.CreateResponse(HttpStatusCode.Forbidden, "Error during sign out");
+            response.Content = new StringContent("Sign out is failed", Encoding.Unicode);
+
+            var policeman = allPoliceman.FirstOrDefault((p) => p.Id == id);
+            if (policeman == null)
+            {
+                response.Content = new StringContent("The user with " + id + "is not exist", Encoding.Unicode);
+                return response;
+            }
+
+            var loggedpoliceman = loggedPoliceman.FirstOrDefault((p) => p.Id == id);
+            if (loggedpoliceman == null)
+            {
+                response.Content = new StringContent("The user with " + id + "is not logged", Encoding.Unicode);
+                return response;
+            }
+
+            response = Request.CreateResponse(HttpStatusCode.OK, "The user with " + id + "is logged out");
+            response.Content = new StringContent("Sign out succesfully", Encoding.Unicode);
+            loggedPoliceman.Remove(GetPolicemanById(id));
             return response;
         }
 
