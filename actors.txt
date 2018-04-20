@@ -1,0 +1,33 @@
+Lista aktorów
+
+1. Serwer osługa logowania/ wylogowania z serwisu inteligentny pistolet; zbieranie powiadomień od smartwatchy
+
+2. SmartWatch wysyłanie statusu zagrożenia do serwera / odbieranie wezwania do pomocy / nawigacja na miejsce / logowanie/ wylogowywanie z systemu
+
+3. Pistolet wysyła informacje gdy nastepuje uzycie broni/ odbezpieczenie / zabezpieczenie broni
+
+4. GPS Nawigacja przekazywanie aktualnej nawigacji do smatrwatcha
+
+5. Timer przekazywanie aktualnego czasu do smartwatcha
+
+6. Bramka GMS/ WiFi sluzy do rozsylania powiadomien od smartwatchy, kwatery glownej, pistoletow
+
+7. System Inteligentny Pistolet laczy sie z pistoletem gdy nastepuje zalogowanie
+
+8. Alarm Serwis wysyla powiadomienia do kwatery glownej/ ambulansu/ strazy pozarnej 
+
+9. Serwis administracyjny dodaje/ usuwa/ aktualizuje baze danych
+
+10. Serwis aktualizujący dane kolejkuje dane od serwera
+
+11. Serwis statystyczny kolekcjonuje dane o zakonczonych akcjach w celu efektywniejszego planowania kolejnych akcji przez alarm serwis
+
+12. Serwis Wizualizacja generuje na mapie aktualna pozycje policjantow w terenie oraz aktualne zagrozenia
+
+13. Użytkownik - gdy ma uprawnienia moze ogladac wyniki ktore generuje serwis wizualizacja
+
+14. Kwatera główna wysyla komunikaty do policjantow na smartwatche o miejscu zagrozenia 
+
+15. Ambulans wzywany przez alarm serwis 
+
+16. Straż pożarna wzywany przez alarm serwis 
