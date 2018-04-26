@@ -1,33 +1,59 @@
+﻿W liście datowanym niedziela, 22 kwietnia 2018 (13:19:04) napisano:
 Lista aktorów
 
-1. Serwer osługa logowania/ wylogowania z serwisu inteligentny pistolet; zbieranie powiadomień od smartwatchy
+(+) Powiadomienia: 
+- zalogowanie/ wylogowanie z systemu;
+- wyciągnięcie, schowanie, użycie broni
 
-2. SmartWatch wysyłanie statusu zagrożenia do serwera / odbieranie wezwania do pomocy / nawigacja na miejsce / logowanie/ wylogowywanie z systemu
+1. Serwer osługa logowania/ wylogowania z serwisu inteligentny pistolet;
+zbieranie powiadomień od smartwatchy
 
-3. Pistolet wysyła informacje gdy nastepuje uzycie broni/ odbezpieczenie / zabezpieczenie broni
+2. SmartWatch odbieranie wezwania do pomocy / nawigacja na miejsce / 
+logowanie/ wylogowywanie z systemu
+
+SmartWatch 
+wysyłanie Powiadomień (patrz (+)), 
+otrzymanie wezwania pomocy,
+przesłanie punktu docelowego do nawigacji w samochodzie
+
+3. Pistolet wysyła informacje gdy nastepuje uzycie broni/ odbezpieczenie
+/ zabezpieczenie broni
 
 4. GPS Nawigacja przekazywanie aktualnej nawigacji do smatrwatcha
 
 5. Timer przekazywanie aktualnego czasu do smartwatcha
 
-6. Bramka GMS/ WiFi sluzy do rozsylania powiadomien od smartwatchy, kwatery glownej, pistoletow
+6. Bramka GMS/ WiFi/ System łączności policji sluzy do rozsylania powiadomien od smartwatchy, 
+kwatery glownej, pistoletow
 
-7. System Inteligentny Pistolet laczy sie z pistoletem gdy nastepuje zalogowanie
 
-8. Alarm Serwis wysyla powiadomienia do kwatery glownej/ ambulansu/ strazy pozarnej 
+7. System Inteligentny Pistolet laczy sie z pistoletem gdy nastepuje
+zalogowanie
+
+8. Alarm Serwis wysyla powiadomienia do kwatery glownej/ ambulansu/ 
+strazy pozarnej/ inteligentnego pistoletu
 
 9. Serwis administracyjny dodaje/ usuwa/ aktualizuje baze danych
 
-10. Serwis aktualizujący dane kolejkuje dane od serwera
+Co to jest "serwis" to aktor?
 
-11. Serwis statystyczny kolekcjonuje dane o zakonczonych akcjach w celu efektywniejszego planowania kolejnych akcji przez alarm serwis
+/*Moduł administratora dodaje/ usuwa/ aktualizuje baze danych, reprezentuje adminstratora więc jest aktorem*/
 
-12. Serwis Wizualizacja generuje na mapie aktualna pozycje policjantow w terenie oraz aktualne zagrozenia
+10. Serwis aktualizujący dane kolejkuje dane od serwera ktore maja byc
+dodane do bazy
 
-13. Użytkownik - gdy ma uprawnienia moze ogladac wyniki ktore generuje serwis wizualizacja
+11. Serwis statystyczny kolekcjonuje dane o zakonczonych akcjach w celu
+efektywniejszego planowania kolejnych akcji przez alarm serwis
 
-14. Kwatera główna wysyla komunikaty do policjantow na smartwatche o miejscu zagrozenia 
+To jest aktor czy baza danych w systemie?
 
-15. Ambulans wzywany przez alarm serwis 
+/* Serwis statystyczny powala na analizę i agregację danych z bazy danych */
 
-16. Straż pożarna wzywany przez alarm serwis 
+12. Baza danych przechowuje dane o policjantach 
+
+13. Kwatera główna wysyla komunikaty do policjantow na smartwatche o
+miejscu zagrozenia
+
+14. Ambulans wzywany przez alarm serwis
+
+15. Straż pożarna wzywana przez alarm serwis
