@@ -191,7 +191,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Core\Policeman.cs" />
-    <Compile Include="Core\User.cs" />
+    <Compile Include="Models\PolicemanController.cs" />
+    <Compile Include="Models\StatusController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -248,7 +249,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -262,6 +262,16 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObjectsManager.Interfaces\ObjectsManager.Interfaces.csproj">
+      <Project>{78446E18-1D0B-428C-ADD0-572DB7904D0B}</Project>
+      <Name>ObjectsManager.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjectsManager.LiteDB\ObjectsManager.LiteDB.csproj">
+      <Project>{2B8AA907-B43F-4A4C-A055-B862735DB0DC}</Project>
+      <Name>ObjectsManager.LiteDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
