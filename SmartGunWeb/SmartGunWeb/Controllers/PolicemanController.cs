@@ -6,13 +6,15 @@ using System.Net.Http;
 using System.Text;
 using System.Web.Http;
 using SmartGunWeb.Core;
+using ObjectsManager.Interfaces;
+using ObjectsManager.LiteDB;
 
 namespace SmartGunWeb.Controllers
 {
     public class PolicemanController : ApiController
     {
         HashSet<Policeman> loggedPoliceman = new HashSet<Policeman>();
-        HashSet<Policeman> allPoliceman = new HashSet<Policeman>();
+        private readonly IPolicemanRepository allPolicemans = new PolicemanRepository();
 
         public IEnumerable<Policeman> GetAllCurrentLoggedPoliceman()
         {

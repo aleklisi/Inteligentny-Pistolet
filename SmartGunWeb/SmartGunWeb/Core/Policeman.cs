@@ -1,6 +1,6 @@
 ﻿namespace SmartGunWeb.Core
 {
-    public class Policeman : User
+    public class Policeman
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -27,6 +27,6 @@
             Name = name;
             Status = status;
         }
-        
+
     }
 }

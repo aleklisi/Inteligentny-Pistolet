@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartGunWeb.Core
+namespace ObjectsManager.Model
 {
-    interface User
+    public enum Status
     {
-
+        Ok, Warning, Critical
     }
 }
