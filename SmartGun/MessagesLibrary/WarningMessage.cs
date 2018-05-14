@@ -1,6 +1,7 @@
 ﻿using System.Runtime.Serialization;
+using System.ServiceModel.Channels;
 
-namespace PointOfContact
+namespace MessagesLibrary
 {
     [DataContract]
     public class WarningMessage:Message

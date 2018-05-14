@@ -38,24 +38,25 @@ namespace Policeman
                         break;
 
                     MessageFilter.Message message = null;
-
+                    
+                    message = new UpdateMessage();
                     if (input != null && input.ToUpper() == "U")
                     {
-                        message = _messageClient.GetProperTypeForMessage(getRandomLocation(),
-                            getRandomLocation(), _username, MessageType.Update);
+                        message = new UpdateMessage();                  
                     }
 
                     if (input.ToUpper() == "S")
                     {
-                        message = _messageClient.GetProperTypeForMessage(getRandomLocation(),
-                            getRandomLocation(), _username, MessageType.Shot);
+                        message = new ShotMessage();
                     }
 
                     if (input.ToUpper() == "W")
                     {
-                        message = _messageClient.GetProperTypeForMessage(getRandomLocation(),
-                            getRandomLocation(), _username, MessageType.Warning);
+                        message = new WarningMessage();
                     }
+                    message.Username = _username;
+                    message.X = getRandomLocation();
+                    message.Y = getRandomLocation();
                     _messageClient.ReceiveData(message);
                 }
             }

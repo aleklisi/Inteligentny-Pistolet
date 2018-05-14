@@ -1,8 +1,8 @@
-﻿using System.ServiceModel;
+﻿using System.Runtime.Serialization;
 
-namespace PointOfContact
+namespace MessagesLibrary
 {
-    [ServiceContract]
+    [DataContract]
     public class ShotMessage : Message
     {
         public ShotMessage(int x, int y, string username) : base(x, y, username)

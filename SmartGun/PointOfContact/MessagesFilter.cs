@@ -1,10 +1,11 @@
 ﻿using System.ServiceModel;
+using MessagesLibrary;
 
 namespace PointOfContact
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
-    public class MessageFilter : IMessagesFilter
+    public class MessagesFilter : IMessagesFilter
     {
         public bool LogIn(string username)
         {
@@ -26,24 +27,6 @@ namespace PointOfContact
                     //TODO update database
                     break;
             }
-        }
-
-        public Message GetProperTypeForMessage(int x, int y, string username, MessageType messageType)
-        {
-            if (messageType == MessageType.Update)
-            {
-                return new UpdateMessage(x, y, username);
-            }
-            if (messageType == MessageType.Warning)
-            {
-                return new WarningMessage(x, y, username);
-            }
-            if (messageType == MessageType.Shot)
-            {
-                return new ShotMessage(x, y, username);
-            }
-
-            return new Message(x, y, username);
         }
     }
 }

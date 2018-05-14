@@ -1,0 +1,6 @@
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\MessagesLibrary\bin\Debug\MessagesLibrary.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\MessagesLibrary\bin\Debug\MessagesLibrary.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\MessagesLibrary\obj\Debug\MessagesLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\MessagesLibrary\obj\Debug\MessagesLibrary.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\MessagesLibrary\obj\Debug\MessagesLibrary.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\MessagesLibrary\obj\Debug\MessagesLibrary.csprojResolveAssemblyReference.cache

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace PointOfContact
+namespace MessagesLibrary
 {
     [DataContract]
     public class UpdateMessage:Message
