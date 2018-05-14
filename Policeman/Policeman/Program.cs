@@ -36,17 +36,27 @@ namespace Policeman
                     var input = Console.ReadLine();
                     if (input != null && input.ToUpper() == "Q")
                         break;
+
+                    MessageFilter.Message message = null;
+
                     if (input != null && input.ToUpper() == "U")
                     {
-                        MessageFilter.Message message = new Message();
-                        
-                        _messageClient.ReceiveData(message);
+                        message = _messageClient.GetProperTypeForMessage(getRandomLocation(),
+                            getRandomLocation(), _username, MessageType.Update);
                     }
-                        //    messageClient.ReceiveData();
-                        if (input.ToUpper() == "S")
-                            
-                            if (input.ToUpper() == "W")
-                                break;
+
+                    if (input.ToUpper() == "S")
+                    {
+                        message = _messageClient.GetProperTypeForMessage(getRandomLocation(),
+                            getRandomLocation(), _username, MessageType.Shot);
+                    }
+
+                    if (input.ToUpper() == "W")
+                    {
+                        message = _messageClient.GetProperTypeForMessage(getRandomLocation(),
+                            getRandomLocation(), _username, MessageType.Warning);
+                    }
+                    _messageClient.ReceiveData(message);
                 }
             }
         }

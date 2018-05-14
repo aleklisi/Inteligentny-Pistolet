@@ -1,10 +1,10 @@
-﻿using System.Runtime.Serialization;
+﻿using System.ServiceModel;
 
 namespace PointOfContact
 {
-    [DataContract]
-    public class ShotMessage:Message
-    {    
+    [ServiceContract]
+    public class ShotMessage : Message
+    {
         public ShotMessage(int x, int y, string username) : base(x, y, username)
         {
             MessageType = MessageType.Shot;

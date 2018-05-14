@@ -135,6 +135,12 @@ namespace Policeman.MessageFilter {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMessagesFilter/ReceiveData", ReplyAction="http://tempuri.org/IMessagesFilter/ReceiveDataResponse")]
         System.Threading.Tasks.Task ReceiveDataAsync(Policeman.MessageFilter.Message message);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMessagesFilter/GetProperTypeForMessage", ReplyAction="http://tempuri.org/IMessagesFilter/GetProperTypeForMessageResponse")]
+        Policeman.MessageFilter.Message GetProperTypeForMessage(int x, int y, string username, Policeman.MessageFilter.MessageType messageType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMessagesFilter/GetProperTypeForMessage", ReplyAction="http://tempuri.org/IMessagesFilter/GetProperTypeForMessageResponse")]
+        System.Threading.Tasks.Task<Policeman.MessageFilter.Message> GetProperTypeForMessageAsync(int x, int y, string username, Policeman.MessageFilter.MessageType messageType);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -178,6 +184,14 @@ namespace Policeman.MessageFilter {
         
         public System.Threading.Tasks.Task ReceiveDataAsync(Policeman.MessageFilter.Message message) {
             return base.Channel.ReceiveDataAsync(message);
+        }
+        
+        public Policeman.MessageFilter.Message GetProperTypeForMessage(int x, int y, string username, Policeman.MessageFilter.MessageType messageType) {
+            return base.Channel.GetProperTypeForMessage(x, y, username, messageType);
+        }
+        
+        public System.Threading.Tasks.Task<Policeman.MessageFilter.Message> GetProperTypeForMessageAsync(int x, int y, string username, Policeman.MessageFilter.MessageType messageType) {
+            return base.Channel.GetProperTypeForMessageAsync(x, y, username, messageType);
         }
     }
 }

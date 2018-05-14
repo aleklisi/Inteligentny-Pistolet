@@ -10,6 +10,9 @@ namespace PointOfContact
         bool LogIn(string username);
         [OperationContract]
         void ReceiveData(Message message);
+        [OperationContract]
+        Message GetProperTypeForMessage(int x, int y, string username, MessageType messageType);
+
         // TODO: Add your service operations here
     }
 }

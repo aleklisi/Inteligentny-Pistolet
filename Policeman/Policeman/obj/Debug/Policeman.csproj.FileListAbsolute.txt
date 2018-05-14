@@ -1,0 +1,7 @@
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\Policeman\Policeman\bin\Debug\Policeman.exe.config
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\Policeman\Policeman\bin\Debug\Policeman.exe
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\Policeman\Policeman\bin\Debug\Policeman.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\Policeman\Policeman\obj\Debug\Policeman.csprojResolveAssemblyReference.cache
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\Policeman\Policeman\obj\Debug\Policeman.csproj.CoreCompileInputs.cache
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\Policeman\Policeman\obj\Debug\Policeman.exe
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\Policeman\Policeman\obj\Debug\Policeman.pdb

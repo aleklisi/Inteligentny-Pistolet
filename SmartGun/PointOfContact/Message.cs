@@ -1,4 +1,6 @@
 ﻿using System.Runtime.Serialization;
+using System.ServiceModel;
+using Microsoft.SqlServer.Server;
 
 namespace PointOfContact
 {
@@ -11,7 +13,6 @@ namespace PointOfContact
         public int Y;
         [DataMember]
         public string Username;
-
         [DataMember]
         public MessageType MessageType;
 

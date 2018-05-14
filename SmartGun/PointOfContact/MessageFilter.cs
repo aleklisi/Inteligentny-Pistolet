@@ -27,5 +27,23 @@ namespace PointOfContact
                     break;
             }
         }
+
+        public Message GetProperTypeForMessage(int x, int y, string username, MessageType messageType)
+        {
+            if (messageType == MessageType.Update)
+            {
+                return new UpdateMessage(x, y, username);
+            }
+            if (messageType == MessageType.Warning)
+            {
+                return new WarningMessage(x, y, username);
+            }
+            if (messageType == MessageType.Shot)
+            {
+                return new ShotMessage(x, y, username);
+            }
+
+            return new Message(x, y, username);
+        }
     }
 }

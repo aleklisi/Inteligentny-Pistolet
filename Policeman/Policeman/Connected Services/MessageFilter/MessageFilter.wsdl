@@ -172,6 +172,44 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IMessagesFilter_GetProperTypeForMessage_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IMessagesFilter_GetProperTypeForMessage_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8080/PointOfContact/?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -191,6 +229,12 @@
   <wsdl:message name="IMessagesFilter_ReceiveData_OutputMessage">
     <wsdl:part name="parameters" element="tns:ReceiveDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IMessagesFilter_GetProperTypeForMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProperTypeForMessage" />
+  </wsdl:message>
+  <wsdl:message name="IMessagesFilter_GetProperTypeForMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProperTypeForMessageResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMessagesFilter">
     <wsdl:operation name="LogIn">
       <wsdl:input wsaw:Action="http://tempuri.org/IMessagesFilter/LogIn" message="tns:IMessagesFilter_LogIn_InputMessage" />
@@ -199,6 +243,10 @@
     <wsdl:operation name="ReceiveData">
       <wsdl:input wsaw:Action="http://tempuri.org/IMessagesFilter/ReceiveData" message="tns:IMessagesFilter_ReceiveData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMessagesFilter/ReceiveDataResponse" message="tns:IMessagesFilter_ReceiveData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProperTypeForMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessagesFilter/GetProperTypeForMessage" message="tns:IMessagesFilter_GetProperTypeForMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessagesFilter/GetProperTypeForMessageResponse" message="tns:IMessagesFilter_GetProperTypeForMessage_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMessagesFilter" type="tns:IMessagesFilter">
@@ -214,6 +262,15 @@
     </wsdl:operation>
     <wsdl:operation name="ReceiveData">
       <soap:operation soapAction="http://tempuri.org/IMessagesFilter/ReceiveData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProperTypeForMessage">
+      <soap:operation soapAction="http://tempuri.org/IMessagesFilter/GetProperTypeForMessage" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -244,6 +301,17 @@
       </wsdl:input>
       <wsdl:output>
         <wsp:PolicyReference URI="#WSHttpBinding_IMessagesFilter_ReceiveData_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProperTypeForMessage">
+      <soap12:operation soapAction="http://tempuri.org/IMessagesFilter/GetProperTypeForMessage" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_IMessagesFilter_GetProperTypeForMessage_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_IMessagesFilter_GetProperTypeForMessage_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
