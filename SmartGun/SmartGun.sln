@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGun", "SmartGun\SmartG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseService", "Database\DatabaseService.csproj", "{845EA685-DA07-4887-BB62-981C4A04E082}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDTest", "BDTest\BDTest.csproj", "{FFC51292-3657-44CA-B6EA-F035A16B9658}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{845EA685-DA07-4887-BB62-981C4A04E082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845EA685-DA07-4887-BB62-981C4A04E082}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845EA685-DA07-4887-BB62-981C4A04E082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC51292-3657-44CA-B6EA-F035A16B9658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC51292-3657-44CA-B6EA-F035A16B9658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC51292-3657-44CA-B6EA-F035A16B9658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC51292-3657-44CA-B6EA-F035A16B9658}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

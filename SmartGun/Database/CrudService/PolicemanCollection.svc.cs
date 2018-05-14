@@ -10,7 +10,7 @@ namespace Database.CrudService{
     {
         private readonly IPolicemanRepostory _policemansRepostiry;
 
-        PolicemanCollection()
+        public PolicemanCollection()
         {
             _policemansRepostiry = new PolicemanRepository();
         }
@@ -25,9 +25,9 @@ namespace Database.CrudService{
             return _policemansRepostiry.Delete(id);
         }
 
-        public Policeman Update(Policeman policeman)
+        public Policeman Update(Policeman policeman, double x, double y)
         {
-            return _policemansRepostiry.Update(policeman);
+            return _policemansRepostiry.Update(policeman,x,y);
         }
 
         public List<Policeman> GetAll()

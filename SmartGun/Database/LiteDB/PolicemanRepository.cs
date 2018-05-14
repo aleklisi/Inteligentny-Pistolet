@@ -47,14 +47,20 @@ namespace Database.LiteDB
             }
         }
 
-        public Policeman Update(Policeman policeman)
+        public Policeman Update(Policeman policeman,double x, double y)
         {
             using (var db = new LiteDatabase(_policemanConnection))
             {
-                var dbObject = policeman;
-
+                
+                policeman.X = x;
+                policeman.Y = y;
+                
                 var repository = db.GetCollection<Policeman>("policeman");
-                return repository.Update(dbObject) ? dbObject : null;
+                if (repository.Update(policeman))
+                {
+                    return policeman;
+                }
+                return  null;
             }
         }
 

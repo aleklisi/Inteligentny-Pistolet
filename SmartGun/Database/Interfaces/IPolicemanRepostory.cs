@@ -8,7 +8,7 @@ namespace Database.Interfaces
         List<Policeman> GetAll();
         int Add(Policeman policeman);
         Policeman Get(int id);
-        Policeman Update(Policeman policeman);
+        Policeman Update(Policeman policeman, double x, double y);
         bool Delete(int id);
     }
 }

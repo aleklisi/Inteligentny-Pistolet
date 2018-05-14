@@ -2,16 +2,17 @@
 {
     public class Policeman
     {
-        public int Id;
-        public readonly string Name;
-        public readonly string Nick;
-        public int X;
-        public int Y;
+        public int Id { set; get; }
+        public string Name { set; get; }
+        public string Nick { set; get; }
+        public double X { set; get; }
+        public double Y { set; get; }
 
         public Policeman(string name, string nick)
         {
             Name = name;
             Nick = nick;
         }
+        public Policeman() { }
     }
 }

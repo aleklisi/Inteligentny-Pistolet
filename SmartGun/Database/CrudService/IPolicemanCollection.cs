@@ -15,7 +15,7 @@ namespace Database.CrudService
         bool Remove(int id);
 
         [OperationContract]
-        Policeman Update(Policeman policeman);
+        Policeman Update(Policeman policeman,double x, double y);
 
         [OperationContract]
         List<Policeman> GetAll();
