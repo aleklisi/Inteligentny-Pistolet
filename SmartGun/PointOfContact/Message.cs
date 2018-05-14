@@ -12,17 +12,14 @@ namespace PointOfContact
         [DataMember]
         public string Username;
 
-        public MessageType Type { get; }
-
         [DataMember]
         public MessageType MessageType;
 
-        public Message(int x, int y, string username, MessageType messageType)
+        public Message(int x, int y, string username)
         {
             X = x;
             Y = y;
             Username = username;
-            Type = messageType;
         }
     }
 }

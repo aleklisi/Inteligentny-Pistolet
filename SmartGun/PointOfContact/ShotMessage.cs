@@ -1,9 +1,13 @@
-﻿namespace PointOfContact
+﻿using System.Runtime.Serialization;
+
+namespace PointOfContact
 {
+    [DataContract]
     public class ShotMessage:Message
-    {
-        public ShotMessage(int x, int y, string username, MessageType messageType) : base(x, y, username, messageType)
+    {    
+        public ShotMessage(int x, int y, string username) : base(x, y, username)
         {
+            MessageType = MessageType.Shot;
         }
     }
 }

@@ -1,10 +1,14 @@
-﻿namespace PointOfContact
+﻿using System.Runtime.Serialization;
+
+namespace PointOfContact
 {
+    [DataContract]
     public class WarningMessage:Message
     {
-        public WarningMessage(int x, int y, string username, MessageType messageType) 
-            : base(x, y, username, messageType)
+        public WarningMessage(int x, int y, string username) 
+            : base(x, y, username)
         {
+            MessageType = MessageType.Warning;
         }
     }
 }
