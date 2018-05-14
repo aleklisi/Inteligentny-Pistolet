@@ -186,13 +186,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PolicemanController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="Core\Status.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Core\Policeman.cs" />
-    <Compile Include="Models\PolicemanController.cs" />
-    <Compile Include="Models\StatusController.cs" />
+    <Compile Include="Models\DatabaseModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -271,6 +268,10 @@
     <ProjectReference Include="..\ObjectsManager.LiteDB\ObjectsManager.LiteDB.csproj">
       <Project>{2B8AA907-B43F-4A4C-A055-B862735DB0DC}</Project>
       <Name>ObjectsManager.LiteDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjectsManager.Model\ObjectsManager.Model.csproj">
+      <Project>{10A71E83-98F6-4A06-90B9-BB684B5AD721}</Project>
+      <Name>ObjectsManager.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
