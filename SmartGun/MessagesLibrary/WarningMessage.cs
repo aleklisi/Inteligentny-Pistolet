@@ -7,7 +7,7 @@ namespace MessagesLibrary
     public class WarningMessage:Message
     {
 
-        public WarningMessage(int x, int y, string username) 
+        public WarningMessage(double x, double y, string username) 
             : base(x, y, username)
         {
             MessageType = MessageType.Warning;
