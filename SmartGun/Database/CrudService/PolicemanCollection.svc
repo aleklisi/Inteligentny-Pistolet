@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Database.CrudService.PolicemanCollection" CodeBehind="PolicemanCollection.svc.cs" %>

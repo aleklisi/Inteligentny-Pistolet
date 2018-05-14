@@ -5,3 +5,13 @@ C:\Users\Natalia\source\repos\SmartGun\SmartGun\bin\Debug\SmartGun.exe
 C:\Users\Natalia\source\repos\SmartGun\SmartGun\bin\Debug\SmartGun.pdb
 C:\Users\Natalia\source\repos\SmartGun\SmartGun\obj\Debug\SmartGun.exe
 C:\Users\Natalia\source\repos\SmartGun\SmartGun\obj\Debug\SmartGun.pdb
+C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\SmartGun\obj\Debug\SmartGun.csprojResolveAssemblyReference.cache
+C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\SmartGun\obj\Debug\SmartGun.csproj.CoreCompileInputs.cache
+C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\SmartGun\obj\Debug\SmartGun.exe
+C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\SmartGun\obj\Debug\SmartGun.pdb
+C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\SmartGun\bin\Debug\SmartGun.exe.config
+C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\SmartGun\bin\Debug\SmartGun.exe
+C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\SmartGun\bin\Debug\SmartGun.pdb
+C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\SmartGun\bin\Debug\LiteDB.dll
+C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\SmartGun\bin\Debug\LiteDB.xml
+C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\SmartGun\obj\Debug\SmartGun.csproj.CopyComplete
