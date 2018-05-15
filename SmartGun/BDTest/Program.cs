@@ -55,6 +55,13 @@ namespace BDTest
 
             Console.WriteLine("Policeman After Update");
             PrintDb(client);
+            Console.WriteLine("Policeman before Update by nick ");
+            PrintDb(client);
+
+            client.Update("A", 2.0, 2.0);
+
+            Console.WriteLine("Policeman After Update");
+            PrintDb(client);
             Console.ReadKey();
         }
     }

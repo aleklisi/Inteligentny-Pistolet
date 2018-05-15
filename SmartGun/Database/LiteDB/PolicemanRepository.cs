@@ -64,6 +64,29 @@ namespace Database.LiteDB
             }
         }
 
+        public Policeman Update(string policemanNick, double x, double y)
+        {
+            using (var db = new LiteDatabase(_policemanConnection))
+            {
+
+                var repository = db.GetCollection<Policeman>("policeman");
+                if (!repository.Exists(pol => pol.Nick == policemanNick))
+                {
+                    return null;
+                }
+                var policeman = repository.Find(pol => pol.Nick == policemanNick).First();
+                
+                policeman.X = x;
+                policeman.Y = y;
+
+                if (repository.Update(policeman))
+                {
+                    return policeman;
+                }
+                return null;
+            }
+        }
+
         public bool Delete(int id)
         {
             using (var db = new LiteDatabase(_policemanConnection))
