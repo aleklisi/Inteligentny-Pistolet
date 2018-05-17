@@ -1,4 +1,5 @@
 ﻿using System.ServiceModel;
+using MessagesLibrary;
 
 namespace PointOfContact
 {

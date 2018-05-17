@@ -12,3 +12,5 @@ C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\obj\Deb
 C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\obj\Debug\PointOfContact.csproj.CoreCompileInputs.cache
 C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\obj\Debug\PointOfContact.dll
 C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\obj\Debug\PointOfContact.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\MessagesLibrary.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\MessagesLibrary.pdb

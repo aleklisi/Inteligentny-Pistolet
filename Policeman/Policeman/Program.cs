@@ -1,17 +1,16 @@
 ﻿using System;
-using System.ServiceModel.PeerResolvers;
 using Policeman.MessageFilter;
 
 namespace Policeman
 {
     class Program
     {
-        private static MessageFilter.MessagesFilterClient _messageClient;
+        private static MessagesFilterClient _messageClient;
         private static string _username;
 
         static void Main()
         {
-            _messageClient = new MessageFilter.MessagesFilterClient("BasicHttpBinding_IMessagesFilter");
+            _messageClient = new MessagesFilterClient("BasicHttpBinding_IMessagesFilter");
 
             Console.WriteLine("Please enter your name: ");
             Console.WriteLine("If you want to quit press Q");
@@ -36,25 +35,35 @@ namespace Policeman
                     var input = Console.ReadLine();
                     if (input != null && input.ToUpper() == "Q")
                         break;
+
+                    Message message = new UpdateMessage();
+
                     if (input != null && input.ToUpper() == "U")
                     {
-                        MessageFilter.Message message = new Message();
-                        
-                        _messageClient.ReceiveData(message);
+                        message = new UpdateMessage();                  
                     }
-                        //    messageClient.ReceiveData();
-                        if (input.ToUpper() == "S")
-                            
-                            if (input.ToUpper() == "W")
-                                break;
+
+                    if (input != null && input.ToUpper() == "S")
+                    {
+                        message = new ShotMessage();
+                    }
+
+                    if (input != null && input.ToUpper() == "W")
+                    {
+                        message = new WarningMessage();
+                    }
+                    message.Username = _username;
+                    message.X = GetRandomLocation(-90, 90);
+                    message.Y = GetRandomLocation(-180, 180);
+                    _messageClient.ReceiveData(message);
                 }
             }
         }
 
-        private static int getRandomLocation()
+        private static double GetRandomLocation(int maximum, int minimum)
         {
             Random rnd = new Random();
-            return rnd.Next(-90, 90);
+            return rnd.NextDouble() * (maximum - minimum) + minimum;
         }
     }
 }

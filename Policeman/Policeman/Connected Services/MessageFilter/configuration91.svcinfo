@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="FbI/+JuU4q0fWutrZVlmI+9hFF0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="In91QpJeo6I/rMKguti/9iafRZA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IMessagesFilter">
       <properties>
@@ -321,10 +321,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="WSHttpBinding_IMessagesFilter" contract="MessageFilter.IMessagesFilter" bindingType="wsHttpBinding" address="http://localhost:8080/PointOfContact/Message" bindingConfiguration="WSHttpBinding_IMessagesFilter">
+    <endpoint name="WSHttpBinding_IMessagesFilter" contract="MessageFilter.IMessagesFilter" bindingType="wsHttpBinding" address="http://localhost:8080/PointOfContact/Messages" bindingConfiguration="WSHttpBinding_IMessagesFilter">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/PointOfContact/Message</serializedValue>
+          <serializedValue>http://localhost:8080/PointOfContact/Messages</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

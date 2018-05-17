@@ -45,16 +45,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IMessagesFilter.cs" />
-    <Compile Include="Message.cs" />
-    <Compile Include="MessageType.cs" />
+    <Compile Include="MessagesFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MessageFilter.cs" />
-    <Compile Include="ShotMessage.cs" />
-    <Compile Include="UpdateMessage.cs" />
-    <Compile Include="WarningMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MessagesLibrary\MessagesLibrary.csproj">
+      <Project>{14ec3e49-c781-4cf9-b280-cfb9ad51cedc}</Project>
+      <Name>MessagesLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

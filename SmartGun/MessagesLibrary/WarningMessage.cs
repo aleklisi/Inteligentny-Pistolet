@@ -1,11 +1,13 @@
 ﻿using System.Runtime.Serialization;
+using System.ServiceModel.Channels;
 
-namespace PointOfContact
+namespace MessagesLibrary
 {
     [DataContract]
     public class WarningMessage:Message
     {
-        public WarningMessage(int x, int y, string username) 
+
+        public WarningMessage(double x, double y, string username) 
             : base(x, y, username)
         {
             MessageType = MessageType.Warning;
