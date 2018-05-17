@@ -30,6 +30,11 @@ namespace Database.CrudService{
             return _policemansRepostiry.Update(policeman,x,y);
         }
 
+        public Policeman Update(string policemanNick, double x, double y)
+        {
+            return _policemansRepostiry.Update(policemanNick, x, y);
+        }
+
         public List<Policeman> GetAll()
         {
             return _policemansRepostiry.GetAll();
