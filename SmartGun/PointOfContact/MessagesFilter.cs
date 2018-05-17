@@ -1,5 +1,6 @@
 ﻿using System.ServiceModel;
 using Database.CrudService;
+using Database.Model;
 using MessagesLibrary;
 
 namespace PointOfContact
@@ -12,9 +13,14 @@ namespace PointOfContact
 
         public bool LogIn(string username)
         {
-            
-            // TODO check out in database 
-            return true;
+            if (client.GetAll().Exists(x => x.Name == username))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void ReceiveData(Message message)
@@ -28,7 +34,8 @@ namespace PointOfContact
                     //TODO direct to core
                     break;
                 case MessageType.Update:
-                    //TODO update database
+                    client.Add(new Policeman {Name = message.Username,
+                        X = message.X, Y = message.Y});
                     break;
             }
         }
