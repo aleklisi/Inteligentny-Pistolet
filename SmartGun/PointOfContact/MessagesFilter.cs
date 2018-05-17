@@ -1,4 +1,5 @@
 ﻿using System.ServiceModel;
+using Database.CrudService;
 using MessagesLibrary;
 
 namespace PointOfContact
@@ -7,8 +8,11 @@ namespace PointOfContact
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class MessagesFilter : IMessagesFilter
     {
+        private static IPolicemanCollection client = new PolicemanCollection();
+
         public bool LogIn(string username)
         {
+            
             // TODO check out in database 
             return true;
         }
