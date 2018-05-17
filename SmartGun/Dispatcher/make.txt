@@ -1,0 +1,8 @@
+cd("C:/Users/alekl/Documents/ErlangProtorypes/SmartGun").
+c(dispatcher).
+inets:start().
+dispatcher:start().
+
+% http://localhost:8081/erl/dispatcher:service
+
+inets:stop().
