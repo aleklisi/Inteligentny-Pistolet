@@ -17,6 +17,10 @@ namespace CORE.Logics
             StringBuilder newRow = new StringBuilder();
             newRow.Append("<tr>");
             newRow.Append(Environment.NewLine);
+            newRow.Append("<td>" + DateTime.Now.ToString("h:mm:ss tt") + "</td>");
+            newRow.Append(Environment.NewLine);
+            newRow.Append("<td>" + message.MessageType + "</td>");
+            newRow.Append(Environment.NewLine);
             newRow.Append("<td>" + message.Username + "</td>");
             newRow.Append(Environment.NewLine);
             newRow.Append("<td>" + message.X + "</td>");
