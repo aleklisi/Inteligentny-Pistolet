@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Web.UI.HtmlControls;
 using CORE.Interfaces;
+using MessagesLibrary;
 using PointOfContact;
 
 namespace CORE.Logics
@@ -8,13 +10,14 @@ namespace CORE.Logics
     {
         public void Handle(WarningMessage message)
         {
-            AddWarningToDispatcher();
+            AddWarningToDispatcher(message);
         }
 
-        private void AddWarningToDispatcher()
+        private void AddWarningToDispatcher(WarningMessage message)
         {
             Console.WriteLine("TODO add allert to HTML here!!!");
             //TODO add allert to HTML here!!! 
+            HTMLTableService.AddColumn(message);
         }
     }
 }

@@ -19,3 +19,10 @@ C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\PointOfContact\
 C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\PointOfContact\obj\Debug\PointOfContact.csproj.CoreCompileInputs.cache
 C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\PointOfContact\obj\Debug\PointOfContact.dll
 C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\PointOfContact\obj\Debug\PointOfContact.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\Database.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\MessagesLibrary.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\LiteDB.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\Database.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\Database.dll.config
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\MessagesLibrary.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\LiteDB.xml

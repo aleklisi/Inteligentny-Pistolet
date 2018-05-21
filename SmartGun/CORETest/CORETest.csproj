@@ -53,6 +53,10 @@
       <Project>{a8079e60-5ee9-4f2d-b94f-ed4681a5539f}</Project>
       <Name>CORE</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MessagesLibrary\MessagesLibrary.csproj">
+      <Project>{14EC3E49-C781-4CF9-B280-CFB9AD51CEDC}</Project>
+      <Name>MessagesLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PointOfContact\PointOfContact.csproj">
       <Project>{8E88FB58-8C34-4B9C-B43B-BC3BDD6DC1C3}</Project>
       <Name>PointOfContact</Name>
