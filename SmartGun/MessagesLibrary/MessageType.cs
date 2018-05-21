@@ -1,4 +1,6 @@
-﻿namespace PointOfContact
+﻿using System.Runtime.Serialization;
+
+namespace MessagesLibrary
 {
     public enum MessageType
     {

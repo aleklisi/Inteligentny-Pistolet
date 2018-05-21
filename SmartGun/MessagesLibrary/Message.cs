@@ -1,21 +1,23 @@
 ﻿using System.Runtime.Serialization;
 
-namespace PointOfContact
+namespace MessagesLibrary
 {
     [DataContract]
+    [KnownType(typeof(UpdateMessage))]
+    [KnownType(typeof(WarningMessage))]
+    [KnownType(typeof(ShotMessage))]
     public class Message
     {
         [DataMember]
-        public int X;
+        public double X;
         [DataMember]
-        public int Y;
+        public double Y;
         [DataMember]
         public string Username;
-
         [DataMember]
         public MessageType MessageType;
 
-        public Message(int x, int y, string username)
+        public Message(double x, double y, string username)
         {
             X = x;
             Y = y;

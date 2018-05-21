@@ -15,8 +15,11 @@ namespace Policeman.MessageFilter {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Message", Namespace="http://schemas.datacontract.org/2004/07/PointOfContact")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Message", Namespace="http://schemas.datacontract.org/2004/07/MessagesLibrary")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Policeman.MessageFilter.UpdateMessage))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Policeman.MessageFilter.WarningMessage))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Policeman.MessageFilter.ShotMessage))]
     public partial class Message : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -29,10 +32,10 @@ namespace Policeman.MessageFilter {
         private string UsernameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int XField;
+        private double XField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int YField;
+        private double YField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -71,7 +74,7 @@ namespace Policeman.MessageFilter {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int X {
+        public double X {
             get {
                 return this.XField;
             }
@@ -84,7 +87,7 @@ namespace Policeman.MessageFilter {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Y {
+        public double Y {
             get {
                 return this.YField;
             }
@@ -106,8 +109,29 @@ namespace Policeman.MessageFilter {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MessageType", Namespace="http://schemas.datacontract.org/2004/07/PointOfContact")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UpdateMessage", Namespace="http://schemas.datacontract.org/2004/07/MessagesLibrary")]
+    [System.SerializableAttribute()]
+    public partial class UpdateMessage : Policeman.MessageFilter.Message {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WarningMessage", Namespace="http://schemas.datacontract.org/2004/07/MessagesLibrary")]
+    [System.SerializableAttribute()]
+    public partial class WarningMessage : Policeman.MessageFilter.Message {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ShotMessage", Namespace="http://schemas.datacontract.org/2004/07/MessagesLibrary")]
+    [System.SerializableAttribute()]
+    public partial class ShotMessage : Policeman.MessageFilter.Message {
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MessageType", Namespace="http://schemas.datacontract.org/2004/07/MessagesLibrary")]
     public enum MessageType : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -135,6 +159,12 @@ namespace Policeman.MessageFilter {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMessagesFilter/ReceiveData", ReplyAction="http://tempuri.org/IMessagesFilter/ReceiveDataResponse")]
         System.Threading.Tasks.Task ReceiveDataAsync(Policeman.MessageFilter.Message message);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMessagesFilter/GetProperTypeForMessage", ReplyAction="http://tempuri.org/IMessagesFilter/GetProperTypeForMessageResponse")]
+        Policeman.MessageFilter.Message GetProperTypeForMessage(int x, int y, string username, Policeman.MessageFilter.MessageType messageType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMessagesFilter/GetProperTypeForMessage", ReplyAction="http://tempuri.org/IMessagesFilter/GetProperTypeForMessageResponse")]
+        System.Threading.Tasks.Task<Policeman.MessageFilter.Message> GetProperTypeForMessageAsync(int x, int y, string username, Policeman.MessageFilter.MessageType messageType);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -178,6 +208,14 @@ namespace Policeman.MessageFilter {
         
         public System.Threading.Tasks.Task ReceiveDataAsync(Policeman.MessageFilter.Message message) {
             return base.Channel.ReceiveDataAsync(message);
+        }
+        
+        public Policeman.MessageFilter.Message GetProperTypeForMessage(int x, int y, string username, Policeman.MessageFilter.MessageType messageType) {
+            return base.Channel.GetProperTypeForMessage(x, y, username, messageType);
+        }
+        
+        public System.Threading.Tasks.Task<Policeman.MessageFilter.Message> GetProperTypeForMessageAsync(int x, int y, string username, Policeman.MessageFilter.MessageType messageType) {
+            return base.Channel.GetProperTypeForMessageAsync(x, y, username, messageType);
         }
     }
 }
