@@ -15,7 +15,7 @@ namespace CORE.Logics
         {
             IDistanceFindStrategy strategy = new EuclidesStrategy();
             var closestPoliceman = GetClosetPoliceman(message.X, message.Y,strategy);
-            AddWarningToDispatcher(closestPoliceman);
+            AddWarningToDispatcher(closestPoliceman, message);
 
         }
         private List<Policeman> GetClosetPoliceman(double x, double y,IDistanceFindStrategy strategy)
@@ -26,12 +26,16 @@ namespace CORE.Logics
             return strategy.GetClosestPolicemen(policeforce, x, y);
         }
 
-        private void AddWarningToDispatcher(List<Policeman> policemen)
+        private void AddWarningToDispatcher(List<Policeman> policemen, ShotMessage message)
         {
+            HTMLTableService.AddColumn(message);
+
             foreach (var policeman in policemen)
             {
                 Console.WriteLine(policeman.Name);
+      
                 //TODO add allert to HTML here!!! 
+                HTMLTableService.AddColumn(new WarningMessage(message.X, message.Y, policeman.Name));
             }
 
         }
