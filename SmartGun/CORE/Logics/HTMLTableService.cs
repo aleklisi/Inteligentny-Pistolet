@@ -23,9 +23,9 @@ namespace CORE.Logics
             newRow.Append(Environment.NewLine);
             newRow.Append("<td>" + message.Username + "</td>");
             newRow.Append(Environment.NewLine);
-            newRow.Append("<td>" + message.X + "</td>");
-            newRow.Append(Environment.NewLine);
-            newRow.Append("<td>" + message.Y + "</td>");
+            newRow.Append("<td>" + "https://www.google.pl/maps/@" + 
+                          message.Y + "," + message.X+ ",13z" + "</td>");
+        
             newRow.Append(Environment.NewLine);
             newRow.Append("</tr>");
             newRow.Append(Environment.NewLine);

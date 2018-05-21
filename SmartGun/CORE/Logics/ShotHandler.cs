@@ -34,7 +34,6 @@ namespace CORE.Logics
             {
                 Console.WriteLine(policeman.Name);
       
-                //TODO add allert to HTML here!!! 
                 HTMLTableService.AddColumn(new WarningMessage(message.X, message.Y, policeman.Name));
             }
 

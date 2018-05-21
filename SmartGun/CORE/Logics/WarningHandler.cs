@@ -15,8 +15,6 @@ namespace CORE.Logics
 
         private void AddWarningToDispatcher(WarningMessage message)
         {
-            Console.WriteLine("TODO add allert to HTML here!!!");
-            //TODO add allert to HTML here!!! 
             HTMLTableService.AddColumn(message);
         }
     }
