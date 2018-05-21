@@ -1,4 +1,5 @@
-cd("C:/Users/alekl/Documents/ErlangProtorypes/SmartGun").
+%change path to youe repo use / not \ in path
+cd("C:/Users/alekl/Documents/SmartGun/Inteligentny-Pistolet/SmartGun/Dispatcher").
 c(dispatcher).
 inets:start().
 dispatcher:start().
