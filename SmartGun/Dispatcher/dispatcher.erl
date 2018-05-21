@@ -20,8 +20,8 @@ start() ->
       
       {port,8081}, 
       {server_name,"dispatcher"}, 
-      {server_root,"D://tmp"}, 
-      {document_root,"D://tmp/htdocs"}, 
+      {server_root,"C://tmp"}, 
+      {document_root,"C://tmp/htdocs"}, 
       {erl_script_alias, {"/erl", [dispatcher]}}, 
       {error_log, "error.log"}, 
       {security_log, "security.log"}, 
