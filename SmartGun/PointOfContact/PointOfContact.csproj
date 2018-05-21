@@ -55,6 +55,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Database\DatabaseService.csproj">
+      <Project>{845ea685-da07-4887-bb62-981c4a04e082}</Project>
+      <Name>DatabaseService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MessagesLibrary\MessagesLibrary.csproj">
       <Project>{14ec3e49-c781-4cf9-b280-cfb9ad51cedc}</Project>
       <Name>MessagesLibrary</Name>
