@@ -33,6 +33,8 @@ start() ->
          
 service(SessionID, _Env, _Input) ->
       io:fwrite("Recalled at ~p\n",[now()]),
-      {ok, File} = file:read_file("index.html"),
+      {ok, BeforeTable} = file:read_file("top.html"),
+      {ok, Table} = file:read_file("table.html"),
+      {ok, AfterTable} = file:read_file("bottom.html"),
       mod_esi:deliver(SessionID, [ 
-      "Content-Type: text/html\r\n\r\n", File ]).
+      "Content-Type: text/html\r\n\r\n", binary_to_list(BeforeTable) ++ binary_to_list(Table) ++ binary_to_list(AfterTable) ]).
