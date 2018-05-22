@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Web;
 using Database.Model;
 using MessagesLibrary;
 
@@ -13,7 +11,7 @@ namespace CORE.Logics
     {
         private static string filename = @"C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Dispatcher\table.html";
 
-        public static void AddColumn(Message message, List<Policeman> nearestPoliceman = null)
+        public static void AddRow(Message message, List<Policeman> nearestPoliceman = null)
         {
 
             StringBuilder newRow = new StringBuilder();

@@ -1,5 +1,4 @@
 ﻿using MessagesLibrary;
-using PointOfContact;
 
 namespace CORE.Interfaces
 {

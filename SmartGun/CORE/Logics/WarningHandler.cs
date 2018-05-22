@@ -1,8 +1,5 @@
-﻿using System;
-using System.Web.UI.HtmlControls;
-using CORE.Interfaces;
+﻿using CORE.Interfaces;
 using MessagesLibrary;
-using PointOfContact;
 
 namespace CORE.Logics
 {
@@ -15,7 +12,7 @@ namespace CORE.Logics
 
         private void AddWarningToDispatcher(WarningMessage message)
         {
-            HTMLTableService.AddColumn(message);
+            HTMLTableService.AddRow(message);
         }
     }
 }

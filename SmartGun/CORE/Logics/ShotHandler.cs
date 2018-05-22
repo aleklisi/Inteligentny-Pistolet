@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CORE.Interfaces;
 using CORE.Logics.DistanceStrategies;
 using Database.CrudService;
 using Database.Model;
 using MessagesLibrary;
-using PointOfContact;
 
 namespace CORE.Logics
 {
@@ -29,7 +27,7 @@ namespace CORE.Logics
 
         private void AddWarningToDispatcher(List<Policeman> policemen, ShotMessage message)
         {
-            HTMLTableService.AddColumn(message, policemen);
+            HTMLTableService.AddRow(message, policemen);
         }
     }
 }
