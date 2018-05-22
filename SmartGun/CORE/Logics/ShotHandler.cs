@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CORE.Interfaces;
 using CORE.Logics.DistanceStrategies;
 using Database.CrudService;
 using Database.Model;
-using PointOfContact;
+using MessagesLibrary;
 
 namespace CORE.Logics
 {
@@ -14,7 +13,8 @@ namespace CORE.Logics
         {
             IDistanceFindStrategy strategy = new EuclidesStrategy();
             var closestPoliceman = GetClosetPoliceman(message.X, message.Y,strategy);
-            AddWarningToDispatcher(closestPoliceman);
+            var closestNeighbours = closestPoliceman.FindAll(policeman => policeman.X != message.X && policeman.Y != message.Y);
+            AddWarningToDispatcher(closestNeighbours, message);
 
         }
         private List<Policeman> GetClosetPoliceman(double x, double y,IDistanceFindStrategy strategy)
@@ -25,14 +25,9 @@ namespace CORE.Logics
             return strategy.GetClosestPolicemen(policeforce, x, y);
         }
 
-        private void AddWarningToDispatcher(List<Policeman> policemen)
+        private void AddWarningToDispatcher(List<Policeman> policemen, ShotMessage message)
         {
-            foreach (var policeman in policemen)
-            {
-                Console.WriteLine(policeman.Name);
-                //TODO add allert to HTML here!!! 
-            }
-
+            HTMLTableService.AddRow(message, policemen);
         }
     }
 }

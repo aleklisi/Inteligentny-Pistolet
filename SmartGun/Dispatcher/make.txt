@@ -1,5 +1,5 @@
 %change path to youe repo use / not \ in path
-cd("C:/Users/alekl/Documents/SmartGun/Inteligentny-Pistolet/SmartGun/Dispatcher").
+cd("C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Dispatcher").
 c(dispatcher).
 inets:start().
 dispatcher:start().

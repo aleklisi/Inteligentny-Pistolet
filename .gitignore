@@ -331,3 +331,6 @@ ASALocalRun/
 
 # Erlang part
 *.beam
+
+# test file generate html table on page
+table.html
