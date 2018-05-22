@@ -29,15 +29,7 @@ namespace CORE.Logics
 
         private void AddWarningToDispatcher(List<Policeman> policemen, ShotMessage message)
         {
-            HTMLTableService.AddColumn(message);
-
-            foreach (var policeman in policemen)
-            {
-                Console.WriteLine(policeman.Name);
-      
-                HTMLTableService.AddColumn(new UpdateMessage(policeman.X, policeman.Y, policeman.Name));
-            }
-
+            HTMLTableService.AddColumn(message, policemen);
         }
     }
 }
