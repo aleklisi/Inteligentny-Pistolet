@@ -12,7 +12,7 @@ namespace CORE.Logics
 
         private void AddWarningToDispatcher(WarningMessage message)
         {
-            HTMLTableService.AddRow(message);
+            HTMLTableGenerator.AddRow(message);
         }
     }
 }

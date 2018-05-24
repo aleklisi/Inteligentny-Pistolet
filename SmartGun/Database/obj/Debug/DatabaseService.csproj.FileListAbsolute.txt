@@ -8,3 +8,12 @@ C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\Database\obj\De
 C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\Database\obj\Debug\DatabaseService.csproj.CopyComplete
 C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\Database\obj\Debug\Database.dll
 C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\Database\obj\Debug\Database.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Database\bin\Database.dll.config
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Database\bin\Database.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Database\bin\Database.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Database\bin\LiteDB.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Database\bin\LiteDB.xml
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Database\obj\Debug\DatabaseService.csprojResolveAssemblyReference.cache
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Database\obj\Debug\DatabaseService.csproj.CoreCompileInputs.cache
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Database\obj\Debug\Database.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Database\obj\Debug\Database.pdb
