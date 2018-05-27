@@ -27,7 +27,7 @@ namespace CORE.Logics
 
         private void AddWarningToDispatcher(List<Policeman> policemen, ShotMessage message)
         {
-            HTMLTableService.AddRow(message, policemen);
+            HTMLTableGenerator.AddRow(message, policemen);
         }
     }
 }

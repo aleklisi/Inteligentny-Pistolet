@@ -73,7 +73,7 @@
     <Compile Include="Interfaces\IWarningHandler.cs" />
     <Compile Include="Logics\DistanceStrategies\IDistanceFindStrategy.cs" />
     <Compile Include="Logics\DistanceStrategies\EuclidesStrategy.cs" />
-    <Compile Include="Logics\HTMLTableService.cs" />
+    <Compile Include="Logics\HTMLTableGenerator.cs" />
     <Compile Include="Logics\ShotHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Logics\WarningHandler.cs" />

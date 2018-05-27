@@ -7,7 +7,7 @@ using MessagesLibrary;
 
 namespace CORE.Logics
 {
-    public class HTMLTableService
+    public class HTMLTableGenerator
     {
         private static string filename = @"C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\Dispatcher\table.html";
 
