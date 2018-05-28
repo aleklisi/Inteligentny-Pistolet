@@ -30,6 +30,7 @@ namespace PointOfContact
                 case MessageType.Shot:
                     //TODO direct to core
                     break;
+                 
                 case MessageType.Warning:
                     //TODO direct to core
                     break;
