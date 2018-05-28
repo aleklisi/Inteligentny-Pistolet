@@ -10,6 +10,7 @@ namespace PointOfContact
     public class MessagesFilter : IMessagesFilter
     {
         private static IPolicemanCollection client = new PolicemanCollection();
+        private static ServiceReference1.ICoreService channel;
 
         public bool LogIn(string username)
         {
@@ -28,11 +29,11 @@ namespace PointOfContact
             switch (message.MessageType)
             {
                 case MessageType.Shot:
-                    //TODO direct to core
+                    channel.HandleShot(new ShotMessage(message.X, message.Y, message.Username));
                     break;
                  
                 case MessageType.Warning:
-                    //TODO direct to core
+                    channel.HandleWarning(new WarningMessage(message.X, message.Y, message.Username));
                     break;
                 case MessageType.Update:
                     client.Add(new Policeman {Name = message.Username,

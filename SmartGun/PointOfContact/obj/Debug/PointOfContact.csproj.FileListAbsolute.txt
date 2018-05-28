@@ -26,3 +26,4 @@ C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Deb
 C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\Database.dll.config
 C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\MessagesLibrary.pdb
 C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\bin\Debug\LiteDB.xml
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\PointOfContact\obj\Debug\XsdGeneratedCode\GeneratedXsdTypes.cs
