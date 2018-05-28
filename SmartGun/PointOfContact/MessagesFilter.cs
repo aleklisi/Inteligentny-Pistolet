@@ -12,6 +12,14 @@ namespace PointOfContact
         private static IPolicemanCollection client = new PolicemanCollection();
         private static ServiceReference1.ICoreService channel;
 
+        public MessagesFilter()
+        {
+            ServiceHost host = new ServiceHost(typeof(ServiceReference1.CoreServiceClient));
+            ChannelFactory<ServiceReference1.ICoreService> cf = new ChannelFactory<ServiceReference1
+                .ICoreService>("BasicHttpBinding_ICoreService");
+            channel = cf.CreateChannel();
+        }
+
         public bool LogIn(string username)
         {
             if (client.GetAll().Exists(x => x.Name == username))

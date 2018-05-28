@@ -49,6 +49,7 @@ namespace PolicemanSymulationConsole
                     while (input != 'q')
                     {
                         ShowMenuToSendMessage();
+                        System.Console.WriteLine("If you want to exit press q");
                         input = System.Console.ReadKey().KeyChar;
                         System.Console.WriteLine();
                         string messageCode = input.ToString().ToLower();
@@ -59,12 +60,15 @@ namespace PolicemanSymulationConsole
                         if (messageCode == "w")
                         {
                             channel.ReceiveData(generateMessage(login, MessageType.Warning));
+                            System.Console.WriteLine("Warning message was sent");
                         }
                         if (messageCode == "s")
                         {
                             channel.ReceiveData(generateMessage(login, MessageType.Shot));
+                            System.Console.WriteLine("Shot message was sent");
+
                         }
-                        
+
                     }          
                 }
                 else
@@ -72,9 +76,6 @@ namespace PolicemanSymulationConsole
                     System.Console.WriteLine("Access denied");
                     failedlog++;
                 }
-                System.Console.WriteLine("If you want to exit press q");
-                input = System.Console.ReadKey().KeyChar;
-                System.Console.WriteLine();
             }
             
         }
