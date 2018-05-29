@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using Database.Model;
 
 namespace CORE.Logics.DistanceStrategies
@@ -8,7 +9,8 @@ namespace CORE.Logics.DistanceStrategies
     {
         public List<Policeman> GetClosestPolicemen(List<Policeman> policeforce, double x, double y)
         {
-            return policeforce.OrderBy(p => (p.X - x) * (p.X - x) + (p.Y - y) * (p.Y - y)).Skip(1).Take(2).ToList();
+            return policeforce.OrderBy(p => (p.X - x) * (p.X - x) + (p.Y - y) * (p.Y - y)).Distinct().Take(3).ToList();
+            
         }
     }
 }

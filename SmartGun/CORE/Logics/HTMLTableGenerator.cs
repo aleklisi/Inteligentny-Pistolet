@@ -23,7 +23,7 @@ namespace CORE.Logics
             newRow.Append(Environment.NewLine);
             newRow.Append("<td>" + message.Username + "</td>");
             newRow.Append(Environment.NewLine);
-            String link = "https://www.google.pl/maps/@" + message.Y + "," + message.X + ",13z";
+            String link = "https://www.google.pl/maps/@" + message.Y + "," + message.X + ",19z";
             newRow.Append("<td>" + "<a href = " + link+ " > " + link + " </a>" + "</td>");
             newRow.Append(Environment.NewLine);
             if (message.MessageType == MessageType.Warning)

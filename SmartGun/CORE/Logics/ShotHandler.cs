@@ -13,8 +13,13 @@ namespace CORE.Logics
         {
             IDistanceFindStrategy strategy = new EuclidesStrategy();
             var closestPoliceman = GetClosetPoliceman(message.X, message.Y,strategy);
-            var closestNeighbours = closestPoliceman.FindAll(policeman => policeman.Name != message.Username);
-            AddWarningToDispatcher(closestNeighbours, message);
+            closestPoliceman.RemoveAll(policeman => policeman.Name == message.Username);
+            if (closestPoliceman.Count > 2)
+            {
+                closestPoliceman.RemoveAt(2);
+            }
+
+            AddWarningToDispatcher(closestPoliceman, message);
 
         }
         private List<Policeman> GetClosetPoliceman(double x, double y,IDistanceFindStrategy strategy)
