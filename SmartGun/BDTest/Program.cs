@@ -16,6 +16,13 @@ namespace BDTest
             }
 
         }
+
+        static Policeman AssignPosition(Policeman policeman, double x, double y)
+        {
+            policeman.X = x;
+            policeman.Y = y;
+            return policeman;
+        }
         static void Main()
         {
             var client = new PolicemanCollection();
@@ -28,7 +35,22 @@ namespace BDTest
                 new Policeman("Bane", "B"),
                 new Policeman("Cane", "C"),
                 new Policeman("Dane", "D"),
+                new Policeman("Eane", "E"),
+                new Policeman("Fane", "F"),
+                new Policeman("Gane", "G"),
+                new Policeman("Hane", "H"),
+                new Policeman("Iane", "I"),
             };
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    policemans[i * 3 + j].X = j+1;
+                    policemans[i * 3 + j].Y = i+1;
+
+                }
+            }
 
             Console.WriteLine("Before Adding");
             PrintDb(client);
@@ -36,31 +58,8 @@ namespace BDTest
             foreach (var policeman in policemans)
             {
                 policeman.Id = client.Add(policeman);
-                Console.WriteLine("Policeman added");
-                PrintDb(client);
             }
 
-            Console.WriteLine("Policeman before RM");
-            PrintDb(client);
-
-            client.Remove(1);
-
-            Console.WriteLine("Policeman After RM");
-            PrintDb(client);
-
-            Console.WriteLine("Policeman before Update");
-            PrintDb(client);
-
-            client.Update(policemans[1], 2.0, 2.0);
-
-            Console.WriteLine("Policeman After Update");
-            PrintDb(client);
-            Console.WriteLine("Policeman before Update by nick ");
-            PrintDb(client);
-
-            client.Update("A", 2.0, 2.0);
-
-            Console.WriteLine("Policeman After Update");
             PrintDb(client);
             Console.ReadKey();
         }
