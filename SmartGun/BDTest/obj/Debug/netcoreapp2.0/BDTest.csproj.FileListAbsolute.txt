@@ -13,3 +13,17 @@ C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\BDTest\obj\Debu
 C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\BDTest\obj\Debug\netcoreapp2.0\BDTest.csproj.CopyComplete
 C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\BDTest\obj\Debug\netcoreapp2.0\BDTest.dll
 C:\Users\alekl\Documents\SmartGun\Inteligentny-Pistolet\SmartGun\BDTest\obj\Debug\netcoreapp2.0\BDTest.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\bin\Debug\netcoreapp2.0\BDTest.deps.json
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\bin\Debug\netcoreapp2.0\BDTest.runtimeconfig.json
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\bin\Debug\netcoreapp2.0\BDTest.runtimeconfig.dev.json
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\bin\Debug\netcoreapp2.0\BDTest.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\bin\Debug\netcoreapp2.0\BDTest.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\bin\Debug\netcoreapp2.0\Database.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\bin\Debug\netcoreapp2.0\Database.pdb
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\bin\Debug\netcoreapp2.0\Database.dll.config
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\obj\Debug\netcoreapp2.0\BDTest.csprojResolveAssemblyReference.cache
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\obj\Debug\netcoreapp2.0\BDTest.csproj.CoreCompileInputs.cache
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\obj\Debug\netcoreapp2.0\BDTest.AssemblyInfoInputs.cache
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\obj\Debug\netcoreapp2.0\BDTest.AssemblyInfo.cs
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\obj\Debug\netcoreapp2.0\BDTest.dll
+C:\Users\Natalia\Documents\Inteligentny-Pistolet\SmartGun\BDTest\obj\Debug\netcoreapp2.0\BDTest.pdb
