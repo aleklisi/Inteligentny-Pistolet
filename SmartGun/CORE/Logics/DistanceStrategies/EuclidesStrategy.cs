@@ -8,7 +8,7 @@ namespace CORE.Logics.DistanceStrategies
     {
         public List<Policeman> GetClosestPolicemen(List<Policeman> policeforce, double x, double y)
         {
-            return policeforce.OrderBy(p => (p.X - x) * (p.X - x) + (p.Y - y) * (p.Y - y)).Take(2).ToList();
+            return policeforce.OrderBy(p => (p.X - x) * (p.X - x) + (p.Y - y) * (p.Y - y)).Skip(1).Take(2).ToList();
         }
     }
 }

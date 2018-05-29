@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 using PolicemanSymulationConsole.ServiceReference1;
 
 namespace PolicemanSymulationConsole
@@ -22,12 +18,28 @@ namespace PolicemanSymulationConsole
 
             char input = '0';
 
+            ShowGreeting();
+            input = System.Console.ReadKey().KeyChar;
+            System.Console.WriteLine();
+
+            if (input == 's' || input == 'S')
+            {
+
+                System.Console.WriteLine("Please put an username: ");
+                string username = System.Console.ReadLine();
+                if (username != null && username.Length > 4)
+                {
+                    channel.ReceiveData(generateMessage(username, MessageType.Update));
+                }
+                else
+                {
+                    System.Console.WriteLine("Username is too short");
+                    input = 'q';
+                }
+            }
+
             while (input != 'q' && input != 'Q' && failedlog < 3)
             {
-                ShowGreeting();
-                input = System.Console.ReadKey().KeyChar;
-                System.Console.WriteLine();
-                      
                 string login = TryLogIn();
                 if (channel.LogIn(login))
                 {
@@ -37,6 +49,7 @@ namespace PolicemanSymulationConsole
                     while (input != 'q')
                     {
                         ShowMenuToSendMessage();
+                        System.Console.WriteLine("If you want to exit press q");
                         input = System.Console.ReadKey().KeyChar;
                         System.Console.WriteLine();
                         string messageCode = input.ToString().ToLower();
@@ -47,12 +60,15 @@ namespace PolicemanSymulationConsole
                         if (messageCode == "w")
                         {
                             channel.ReceiveData(generateMessage(login, MessageType.Warning));
+                            System.Console.WriteLine("Warning message was sent");
                         }
                         if (messageCode == "s")
                         {
                             channel.ReceiveData(generateMessage(login, MessageType.Shot));
+                            System.Console.WriteLine("Shot message was sent");
+
                         }
-                        
+
                     }          
                 }
                 else
@@ -75,12 +91,14 @@ namespace PolicemanSymulationConsole
         {
             System.Console.WriteLine("SmartGun System");
             System.Console.WriteLine("If you want to exit press q");
+            System.Console.WriteLine("If you want to sign in press s");
+            System.Console.WriteLine("If you want to log in press other key");
+
         }
 
         private static void ShowMenuToSendMessage()
         {
             System.Console.WriteLine("SmartGun Message System");
-            System.Console.WriteLine("Update Message press U");
             System.Console.WriteLine("Warning Message press W");
             System.Console.WriteLine("Shot Message press S");
         }
