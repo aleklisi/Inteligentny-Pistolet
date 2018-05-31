@@ -4,7 +4,7 @@ using CORE.Interfaces;
 using CORE.Logics.DistanceStrategies;
 using Database.CrudService;
 using Database.Model;
-using PointOfContact;
+using MessagesLibrary;
 
 namespace CORE.Logics
 {

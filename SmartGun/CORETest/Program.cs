@@ -1,6 +1,6 @@
 ﻿using System;
 using CORE;
-using PointOfContact;
+using MessagesLibrary;
 
 namespace CORETest
 {

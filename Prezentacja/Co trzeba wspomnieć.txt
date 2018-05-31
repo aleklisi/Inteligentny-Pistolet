@@ -1,0 +1,17 @@
+Czym jest LINQ?
+- Jest skrótem któwy rozwija się do Language INtegrated Query.
+- Część technologii Microsoft .NET.
+- Składnia języka LINQ jest prosta i przypomina SQL.
+
+- Przestrzenie, które obsługuje LINQ, to:
+	- obiekty implementujące interfejs IEnumerable<T>
+	- bazy danych (na potrzeby przezntacji nie rozwijam tematu)
+	- język XML (na potrzeby przezntacji nie rozwijam tematu)
+
+
+- Dwa rodzaje notacji	
+	TwoTypesOfNotation();
+- Leniwa ewaluacja
+	LazyEvaluationWentWrong();
+    ForceEvaluation();
+

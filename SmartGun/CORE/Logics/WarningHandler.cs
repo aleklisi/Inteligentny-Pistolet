@@ -1,6 +1,6 @@
 ﻿using System;
 using CORE.Interfaces;
-using PointOfContact;
+using MessagesLibrary;
 
 namespace CORE.Logics
 {

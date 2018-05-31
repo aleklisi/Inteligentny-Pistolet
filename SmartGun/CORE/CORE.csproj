@@ -93,6 +93,10 @@
       <Project>{845EA685-DA07-4887-BB62-981C4A04E082}</Project>
       <Name>DatabaseService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MessagesLibrary\MessagesLibrary.csproj">
+      <Project>{14ec3e49-c781-4cf9-b280-cfb9ad51cedc}</Project>
+      <Name>MessagesLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PointOfContact\PointOfContact.csproj">
       <Project>{8E88FB58-8C34-4B9C-B43B-BC3BDD6DC1C3}</Project>
       <Name>PointOfContact</Name>

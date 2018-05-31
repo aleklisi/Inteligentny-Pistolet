@@ -1,5 +1,6 @@
 ﻿using CORE.Interfaces;
 using CORE.Logics;
+using MessagesLibrary;
 using PointOfContact;
 
 namespace CORE
