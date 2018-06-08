@@ -15,15 +15,16 @@ namespace Examples
             new Car("Opel","Katarzyna",4),
             new Car("Opel","Zofia",10),
             new Car("Wolga","Aleksander",2),
+            //DLA PRZYKŁADU LazyLoadingIdea ODKOMENTOWAC!!!
+            //null
         };
 
         public static List<string> ForLoopOldCars()
         {
             var result = new List<string>();
-            for (int i = 0; i < Cars.Count; i++)
+            for (var i = 0; i < Cars.Count; i++)
             {
-                Car car = Cars[i];
-                if (car.Age > 3) result.Add(car.OwnerName);
+                if (Cars[i].Age > 3) result.Add(Cars[i].OwnerName);
             }
             return result;
         }
@@ -38,12 +39,12 @@ namespace Examples
             return result;
         }
 
-        public static List<string> LinqLoopOldCars()
+        public static List<string> LinqQuerryNotationOldCars()
         {
             return (from car in Cars where car.Age > 3 select car.OwnerName).ToList();
         }
 
-        public static List<string> DotNotationOldCars()
+        public static List<string> LinqDotNotationOldCars()
         {
             return Cars.Where(c => c.Age > 3).Select(c => c.OwnerName).ToList();
         }

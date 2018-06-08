@@ -6,18 +6,24 @@ namespace Examples
     {
         internal string CarBrand;
         internal string OwnerName;
-        internal int Age;
+        private int _age;
 
-        public void Print()
+        public int Age
         {
-            Console.WriteLine($"{CarBrand}, {OwnerName}, {Age}");
+            get
+            {
+                //DLA PRZYKŁADU LazyLoadingIdea ODKOMENTOWAC!!!
+                //Console.WriteLine("Getting Age");
+                return _age;
+            }
+            set => _age = value;
         }
 
         public Car(string brand, string name, int age)
         {
             CarBrand = brand;
             OwnerName = name;
-            Age = age;
+            _age = age;
         }
 
     }
