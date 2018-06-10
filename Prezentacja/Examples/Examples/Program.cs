@@ -8,11 +8,15 @@ namespace Examples
     {
         static void Main()
         {
-            TwoTypesOfNotation();
+            //TwoTypesOfNotation();
             //LazyLoadingIdea();
             //InfiniteColection();
             //LazyEvaluationWentWrong();
             //ForceEvaluation();
+            //NaturalNambers.NaturalNumbersHowToLazyLoading();
+            //NaturalNambers.GeneratePrimes();
+            //NaturalNambers.ParallelTheEasyWay();
+            //HelloWorld();
         }
 
         static void TwoTypesOfNotation()
@@ -79,6 +83,12 @@ namespace Examples
             }
             Console.ReadKey();
 
+        }
+
+        static void HelloWorld()
+        {
+            "Hello World\n".Select(c => new Action(() => Console.Write(c))).ToList().ForEach(d => d());
+            Console.ReadKey();
         }
     }
 }
